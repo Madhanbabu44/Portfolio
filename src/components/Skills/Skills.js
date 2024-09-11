@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Skills.css";
 import {
   FaHtml5,
@@ -12,15 +12,20 @@ import {
 import { IoLogoJavascript } from "react-icons/io5";
 import { VscVscode } from "react-icons/vsc";
 import { LuFileJson } from "react-icons/lu";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Skills = () => {
+  useEffect(()=>{
+    AOS.init()
+  })
   return (
-    <div id="skills">
+    <div  id="skills">
       <h1 style={{ textAlign: "center" }}>Skills</h1>
       <p style={{ textAlign: "center" }}>
         Here are some of my skils that i have learn
       </p>
       <div className="skills" style={{'padding':'20px'}} >
-        <div className="front">
+        <div data-aos="zoom-in" className="front">
           <h3>Frontend</h3>
           <ul>
             <li>
@@ -45,7 +50,7 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="other">
+        <div data-aos="zoom-in" className="other">
           <h3>Others</h3>
           <ul>
             <li>

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import Profile from "../../images/Profile.png";
 import TypingEffect from "./Type"; // Import the TypingEffect component
 import Resume from "./Madhanbabu Frontend Resume.pdf"
+
+import AOS from "aos"
+import 'aos/dist/aos.css'
 const About = () => {
+  useEffect(()=>{
+      AOS.init();
+  },[])
   const textArray = [
     "React Js Developer",
     "Web Developer",
@@ -13,7 +19,7 @@ const About = () => {
   return (
     <div id="about">
       
-      <div className="details">
+      <div data-aos="fade-right" data-aos-duration="2000" className="details">
         <h2>Hi, I am</h2>
         <h2>Madhanbabu</h2>
         <h4>
@@ -30,7 +36,7 @@ const About = () => {
             <button>Check Resume</button>
           </a>
         </div>
-      </div><div className="img">
+      </div><div  data-aos="fade-up-left" className="img">
         <img src={Profile} alt="Profile Image" />
       </div>
     </div>

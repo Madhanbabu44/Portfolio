@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Project.css";
 import Weather from "../../images/WeatherApp.PNG";
 import Crypto from "../../images/crypto.PNG";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Project = () => {
+  useEffect(()=>{
+    AOS.init()
+  })
   const openWeatherAppCode = () => {
     window.open("https://github.com/Madhanbabu44/WeatherApi_App", "_blank");
   };
@@ -14,14 +18,12 @@ const Project = () => {
   const cryptlive=()=>{
     window.open("http://crypto-price-react.s3-website.ap-south-1.amazonaws.com/","_blank")
   }
-
-
   const weatherlive=()=>{
     window.open("http://weather-app-react.s3-website.ap-south-1.amazonaws.com/","_blank")
   }
   return (
     <div id="Project"><h1>Recent Project</h1>
-      <div className="Pro1">
+      <div data-aos="fade-up" className="Pro1">
         <div className="img">
           <img src={Weather} height="150px" width="150px" />
         </div>
@@ -40,7 +42,7 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="Pro2">
+      <div data-aos="fade-down" className="Pro2">
         <div className="img">
           <img src={Crypto} height="150px" width="150px" />
         </div>

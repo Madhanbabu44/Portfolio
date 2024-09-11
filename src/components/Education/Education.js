@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Education.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Education = () => {
+  useEffect(()=>{
+    AOS.init()
+  })
   return (
     <div id="education">
     <div className="edu">
@@ -10,7 +15,7 @@ const Education = () => {
             <h2>Education</h2>
           </div>
           <div className="education-content">
-            <div className="box">
+            <div data-aos="fade-right" className="box">
               <h4>2022-2024</h4>
               <h3>MSC-Information Technology</h3>
               <p>
@@ -18,7 +23,7 @@ const Education = () => {
                 630001<br />Percentage - 79%
               </p>
             </div>
-            <div className="box">
+            <div data-aos="fade-right" className="box">
               <h4>2019-2022</h4>
               <h3>BVOC-Software Development</h3>
               <p>
@@ -26,7 +31,7 @@ const Education = () => {
                 Sivaganga 630001<br />Percentage - 90.56%
               </p>
             </div>
-            <div className="box">
+            <div data-aos="fade-right" className="box">
               <h4>+2</h4>
               <h3>High School</h3>
               <p>
@@ -41,7 +46,7 @@ const Education = () => {
             <h2>Internship</h2>
           </div>
           <div className="education-content">
-            <div className="box">
+            <div data-aos="fade-left" className="box">
               <h4>Nov-23 to Jan-24</h4>
               <h3>Code Bind Technologies</h3>
               <p>
@@ -54,7 +59,7 @@ const Education = () => {
                 goals
               </p>
             </div>
-            <div className="box">
+            <div data-aos="fade-left" className="box">
               <h4>Mar-22 to May-22</h4>
               <h3>WBC Software Lab p(LTD)</h3>
               <p>

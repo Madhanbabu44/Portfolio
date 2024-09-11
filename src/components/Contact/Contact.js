@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Contact = () => {
+  useEffect(()=>{
+    AOS.init()
+  })
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +46,7 @@ const Contact = () => {
       );
   };
 
-  return (<div id="Contact">
+  return (<div  id="Contact">
     <div className="contact-container">
       <h2>Contact Us</h2>
       
@@ -52,7 +56,7 @@ const Contact = () => {
         </div>
       )}
 
-      <form onSubmit={sendEmail} className="contact-form">
+      <form onSubmit={sendEmail} data-aos="zoom-in" className="contact-form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
