@@ -1,0 +1,38 @@
+#footer{    background: black;
+    color: white;
+    height: 121px;
+}
+#footer .menu ul li{ 
+margin: 0px 10px;    
+   display: inline;
+
+}
+#footer .menu ul{
+    text-align: center;
+}
+#footer .menu ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+#footer .icon ul li{ 
+    margin:0px 5px;    
+       display: inline;
+    
+    }
+    #footer .icon ul{
+        text-align: center;
+    }
+    #footer .icon ul li a{
+        text-decoration: none;
+        cursor: pointer;
+        color:#8b8b8b;
+    }
+       #footer .icon ul li a:hover{
+        color:white
+    }
+    #footer .text{
+        text-align: center;
+    }

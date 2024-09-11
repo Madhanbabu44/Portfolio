@@ -1,0 +1,130 @@
+/* Default styling */
+#about {
+  display: flex;
+  justify-content: space-between; /* Space out content */
+  align-items: center; /* Align items vertically centered */
+  max-width: 100%;
+  height: auto; /* Adjust height to auto for better responsiveness */
+  color: white;
+  top: 50px;
+  background-color: black;
+  padding: 70px 20px; /* Added padding for better spacing */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#about .details {
+  flex: 1; /* Allow details section to take up space */
+  max-width: 600px;
+  padding-right: 20px;padding-left: 30px; /* Add space between text and image */
+}
+
+#about .details h2 {
+  font-size: 50px;
+  margin: 0; /* Remove default margin */
+}
+
+#about .details h4 {
+  font-size: 30px;
+  margin: 10px 0; /* Add vertical margin */
+}
+
+#about .details p {
+  font-size: 16px;
+  line-height: 1.5; /* Improve readability */
+}
+
+#about .details .about-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#about .details .about-btn button {
+  padding: 10px 15px;
+  background: transparent;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  border: 2px rgb(255, 255, 255) solid;
+}
+
+#about .details .about-btn button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  box-shadow: 1px 1px 20px 1px white;
+}
+
+#about .img {
+  flex: 1; /* Allow image section to take up space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding-left: 20px; /* Add space between text and image */
+}
+
+#about .img img {
+  border-radius: 50%;
+  height: 400px; /* Adjust image height to fill available space */
+  width: 400px; /* Keep aspect ratio */
+  max-height: 500px; /* Limit image height */
+  border: 2px rgb(255, 255, 255) solid;
+  object-fit: cover;
+  box-shadow: 1px 1px 50px 1px white;
+  transform: scaleX(-1);
+  transition: 0.5s ease-in;
+  filter: grayscale(100%);
+}
+
+#about .img img:hover {
+  box-shadow: 1px 1px 100px 1px white;
+  filter: grayscale(0);
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  #about {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #about .img {
+    padding-left: 0; /* Remove padding on smaller screens */
+    margin-top: 20px; /* Add margin on top for separation */
+  }
+
+  #about .details {
+    text-align: center;
+    padding-right: 0; /* Remove padding on smaller screens */
+  }
+
+  #about .details h2 {
+    font-size: 40px; /* Adjust font size */
+  }
+
+  #about .details h4 {
+    font-size: 24px; /* Adjust font size */
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 768px) {
+  #about .details h2 {
+    font-size: 30px; /* Adjust font size */
+  }
+
+  #about .details h4 {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  #about .details .about-btn button {
+    padding: 8px 12px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  #about .img img {
+    height: 250px; /* Adjust image height */
+    width: auto; /* Keep aspect ratio */
+  }
+}

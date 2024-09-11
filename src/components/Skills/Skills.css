@@ -1,0 +1,93 @@
+/* General styling */
+#skills {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#skills h1, #skills p {
+  text-align: center;
+  margin: 0;
+}
+
+/* Flex container for skills sections */
+#skills .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align on small screens */
+  gap: 20px; /* Space between sections */
+}
+
+#skills .skills .front, #skills .skills .other {
+  border: 2px solid white;
+  padding: 15px; /* Adjust padding for less height */
+  border-radius: 10px;
+  flex: 1 1 300px; /* Allow flexibility */
+  max-width: 500px; /* Limit width */
+  text-align: center;height: auto;
+  box-sizing: border-box;
+}
+
+/* List styling */
+#skills .skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* Center list items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#skills .skills ul li {
+  border: 2px solid white;
+  padding: 8px; /* Adjust padding for less height */
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+#skills .skills ul .icon {
+  margin-bottom: -3px;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  #skills .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skills .skills .front, #skills .skills .other {
+    max-width: 80%;max-height: 200px;
+  }
+
+  #skills .skills ul li {
+    font-size: 14px; /* Adjust font size */
+    padding: 6px; /* Adjust padding for less height */
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 480px) {
+  #skills .skills ul li {
+    font-size: 12px; /* Adjust font size */
+    padding: 4px; /* Adjust padding for less height */
+  }
+
+  #skills .skills .front, #skills .skills .other {
+    padding: 10px; /* Adjust padding for less height */
+  }
+
+  #skills h1 {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  #skills p {
+    font-size: 12px; /* Adjust font size */
+  }
+}

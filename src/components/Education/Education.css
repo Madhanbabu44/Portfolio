@@ -1,0 +1,71 @@
+#education {
+    background: black;
+    width: 100%;
+    min-height: 100vh;
+  padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #education .edu {
+    width: 100%;
+    padding: 35px 10%;
+  }
+  #education .edu .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2px;
+  }
+  #education .edu .row .col .education-title {
+    font-family: Helvetica;
+    color: white;
+    padding: 0px 0px 20px 30px;
+  }
+  #education .edu .row .col .education-content {
+    padding: 0px 30px;
+    border-left: 2px solid white;
+  }
+  #education .edu .row .col .education-content .box {
+    position: relative;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 10px;
+  }
+  #education .edu .row .col .education-content .box:hover {
+    box-shadow: 0px 3px 12px 0px white;
+    border: 1px solid transparent;
+  }
+  #education .edu .row .col .education-content .box::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 24px);
+    top:0px;
+    background-color: black;
+    border: 2px solid white;
+  }
+  #education .edu .row .col .education-content .box h4 {
+    position: relative;
+    color:white;
+  }
+  #education .edu .row .col .education-content .box h3 {
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: Helvetica;
+    color: white;
+  }
+  #education .edu .row .col .education-content .box p {
+    line-height: 1.2;
+    color: #8b8b8b;
+    font-size: 17px;
+  }
+  @media (max-width: 768px) {
+    #education .edu .row {
+      grid-template-columns: 1fr;
+    }
+  }
